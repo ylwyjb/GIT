@@ -28,4 +28,8 @@ GIT是Linus花了两周时间用C写的一个分布式版本控制系统。
 三.GIT远程操作
     创建SSH: ssh-keygen -t rsa -C "youremail@example.com"，一路回车
     登陆GitHub，打开“Account settings”，“SSH Keys”页面：
-    点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+    点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+    git remote add origin git@github.com:ylwyjb/GIT
+    git remote rm origin:删除远程origin
+    git push -u origin master: 第一次本地库推送到远程库
+    git push origin master: 后续提交可简化

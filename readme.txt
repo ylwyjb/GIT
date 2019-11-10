@@ -14,4 +14,18 @@ GIT是Linus花了两周时间用C写的一个分布式版本控制系统。
     git commit -m "commit contxt"
     git status
     git diff filename； 按Q退出git diff
-    
+    git log (--pretty=oneline) 产看提交历史 #括号可填可不填
+    cat filename: 显示文件内容
+    git reset --hard HEAD^ (HEAD表示当前版本，HEAD^表示上一个版本,HEAD^^表示上上一个版本,HEAD~100上100个版本，
+                            hard后也可以接版本号commit_id，不需要写全，前几位就可以)
+    git reset HEAD filename: 把git add提交的修改撤回
+    git reflog: 查看之前的每一次命令
+    git checkout -- filename: 丢弃工作区的修改，用版本库里的版本替换工作区的版本
+    rm filename: 删除工作区的文件
+    git rm filename: 删除版本库中的文件，需要git commit确认删除 
+
+
+三.GIT远程操作
+    创建SSH: ssh-keygen -t rsa -C "youremail@example.com"，一路回车
+    登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+    点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
